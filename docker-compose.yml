@@ -1,0 +1,13 @@
+version: "2"
+services:
+  pr-telegram:
+    build: .
+    env_file: docker_env
+    environment:
+     TZ: "Asia/Singapore"
+    networks:
+      - pr_demon
+networks:
+  pr_demon:
+    external:
+      name: prdemon_default

@@ -9,7 +9,7 @@ initialize_telegram_bot
 cache = LruRedux::Cache.new(ENV['LRU_COUNT'].to_i)
 
 EM.run {
-  ws = Faye::WebSocket::Client.new('ws://prdemon_pr_demon_1:7999')
+  ws = Faye::WebSocket::Client.new(ENV['PRDEMON_WS'])
 
   ws.on :message do |event|
     @data = JSON.parse(event.data)

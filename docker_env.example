@@ -1,3 +1,4 @@
+PRDEMON_WS=ws://prdemon_pr_demon_1:7999
 TELEGRAM_TOKEN=token1
 RECIPIENTS=groupID1
 LRU_COUNT=10
